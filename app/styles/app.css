@@ -28,3 +28,7 @@ p > .banner {
 p > h4 {
 	margin: 0em;
 }
+
+.error {
+	color: red;
+}
