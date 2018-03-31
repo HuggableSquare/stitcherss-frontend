@@ -11,9 +11,9 @@ export default Controller.extend({
 			const credentials = this.getProperties('email', 'password');
 
 			this.session.authenticate('authenticator:token', credentials)
-				.catch((e) => {
+				.catch(() => {
 					this.set('loading', false);
-					this.set('error', 'Uh oh spaghettio.')
+					this.set('error', 'Uh oh spaghettio.');
 				});
 		}
 	}
