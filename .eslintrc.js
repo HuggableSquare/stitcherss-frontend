@@ -13,14 +13,6 @@ module.exports = {
 			'experimentalObjectRestSpread': true
 		}
 	},
-	'globals': {
-		'describe': true,
-		'it': true,
-		'before': true,
-		'after': true,
-		'beforeEach': true,
-		'afterEach': true
-	},
 	'rules': {
 		'indent': ['warn', 'tab'],
 		'linebreak-style': ['error', 'unix'],
@@ -39,8 +31,7 @@ module.exports = {
 			'error',
 			{
 				'vars': 'all',
-				'args': 'after-used',
-				'argsIgnorePattern': 'next'
+				'args': 'after-used'
 			}
 		],
 		'eol-last': ['warn', 'unix'],
