@@ -1,0 +1,12 @@
+{{outlet}}
+<form {{action 'authenticate' on='submit'}}>
+	<label for="email">Email Address</label>
+	{{input id='email' value=email}}
+	<label for="password">Password</label>
+	{{input id='password' type='password' value=password}}
+	<button type="submit">Login</button>
+</form>
+
+{{#if loading}}
+	{{loading-spinner}}
+{{/if}}

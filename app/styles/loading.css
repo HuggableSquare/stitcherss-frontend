@@ -1,0 +1,100 @@
+.spinner-wrap {
+	height: 48rem;
+	display: flex;
+	align-items: center;
+}
+
+/* if there's already shows loaded this needs to be smaller */
+p ~ .spinner-wrap {
+	height: 96px;
+}
+
+@keyframes loading-message-fade {
+	0% {
+		opacity: 1;
+		background-color: #61aed1;
+	}
+
+	33% {
+		opacity: 1;
+		background-color: #d5d5d4;
+	}
+
+	66% {
+		opacity: 1;
+		background-color: #eae9e9;
+	}
+
+	100% {
+		opacity: 0;
+		background-color: #fff;
+	}
+}
+
+.loading-message {
+	margin: 0 auto;
+	transition-property: opacity;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	text-align: center;
+}
+
+.loading-message b {
+	display: block;
+	margin: 0 auto;
+	width: 39px;
+	height: 39px;
+	overflow: hidden;
+	position: relative;
+}
+
+.loading-message b i {
+	animation: loading-message-fade 1s infinite;
+	display: block;
+	position: absolute;
+	vertical-align: top;
+	margin: 0;
+	width: 18px;
+	height: 18px;
+	background: #00aeea;
+}
+
+.loading-message b i:nth-child(1), .loading-message b i:nth-child(3) {
+	margin-right: 3px;
+}
+
+.loading-message b i:nth-child(1), .loading-message b i:nth-child(2) {
+	margin-bottom: 3px;
+}
+
+.loading-message b i:nth-child(2) {
+	animation-delay: .2s;
+	left: 21px;
+}
+
+.loading-message b i:nth-child(3) {
+	animation-delay: .4s;
+	top: 21px;
+	left: 21px
+}
+
+.loading-message b i:nth-child(4) {
+	animation-delay: .6s;
+	top: 21px;
+}
+
+.loading-message b i:nth-child(1) {
+	opacity: 1;
+}
+
+.loading-message b i:nth-child(2) {
+	opacity: .75;
+}
+
+.loading-message b i:nth-child(3) {
+	opacity: .5;
+}
+
+.loading-message b i:nth-child(4) {
+	opacity: .25;
+}

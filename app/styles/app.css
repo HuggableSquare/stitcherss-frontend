@@ -1,0 +1,30 @@
+@import 'loading.css';
+
+.logout {
+	float: right;
+}
+
+p:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+p > img {
+	height: 5em;
+	width: 5em;
+	float: left;
+	padding-right: 1em;
+}
+
+p > .banner {
+	font-family: Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #c08a31;
+	font-weight: 700;
+}
+
+p > h4 {
+	margin: 0em;
+}

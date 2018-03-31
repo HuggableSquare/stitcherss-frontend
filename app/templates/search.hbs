@@ -1,0 +1,10 @@
+<form {{action 'search' true on='submit'}}>
+	{{input value=term}}
+	<button type="submit">Search</button>
+
+	<button class="logout" {{action 'logout'}}>Logout</button>
+</form>
+
+{{search-results loading=loading search=search term=term loadMoreResults=(action 'search')}}
+
+{{outlet}}

@@ -1,0 +1,18 @@
+{{outlet}}
+{{#each shows as |show|}}
+	<p>
+		<img src="{{show.thumbnailURL}}" />
+		{{#if show.banner}}
+			<div class="banner">{{show.banner}}</div>
+		{{/if}}
+		<h4 title="{{show.description}}">{{show.name}}</h4>
+		<code>https://pogonip.pw/stitcher/shows/{{show.id}}/feed?token={{session.data.authenticated.token}}</code>
+	</p>
+{{/each}}
+
+{{#if loading}}
+	{{loading-spinner}}
+{{else if (lt shows.length search.total)}}
+	<button {{action loadMoreResults}}>Load More Results</button>
+	<p>Viewing {{search.results.length}} of {{search.total}} Total</p>
+{{/if}}
